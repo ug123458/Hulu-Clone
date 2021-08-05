@@ -1,3 +1,4 @@
+import React from 'react'
 import Image from 'next/image'
 import { ThumbUpIcon } from '@heroicons/react/outline'
 import { forwardRef } from 'react'
@@ -11,6 +12,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
     >
       <Image
         layout='responsive'
+        alt='movie-images'
         height={1080}
         width={1920}
         src={`${BASE_URL}${result.backdrop_path || result.poster_path}`}
